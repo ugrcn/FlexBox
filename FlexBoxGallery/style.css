@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    height: 180px;
+    width: 100%;
+    background-color:#7986CB;
+    color: white;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+}
+/* Flex özelliği ile row içindeki columnlar düzenli şekilde div içerisinde yer alacak ve görünümleri bu yönde olacaktır.
+flex-wrap ile de sığmayan columnların devamının alt satıra geçmesini sağladık. */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+/* Sayfa tam boyuttayken her columnun sayfada en fazla %20' lik yer kaplayacağını belirledik. */
+.column{
+    flex: 20%;
+    width: 100%;
+}
+/* image elementlerinin özelliklerini belirledik. */
+.column>img{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.footer{
+    height: 120px;
+    width: 100%;
+    background-color:#7986CB;
+    margin-top:20px; 
+    text-align: center;
+    color: white;
+}
+
+/* 800px ve 500px arasında columnların yarısı ekranda görünecek, 500px değerine kadar da ekranda %100 boyutunda sadece 1 tane column gözükecektir. */
+@media(max-width:800px)
+{
+    .column{
+        flex:50%;
+        max-width: 100%;
+    }
+}
+
+@media(max-width:500px)
+{
+    .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+}

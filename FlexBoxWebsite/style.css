@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Sayfamızda tüm alanlarda yazılan fontların font ailesini belirledik. */
+body{
+    font-family: 'Martel Sans', sans-serif;
+}
+
+.header{
+    background-color:#227093;
+    padding: 70px;
+    margin: auto;
+    width: 80%;
+    text-align: center;
+    color: white;
+}
+/* Navbar kısmını flex özelliği ile şekillendirdik. */
+.navbar{
+    display: flex;
+    background-color: #6D214F;
+    width: 80%;
+    margin: auto;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.navbar a:hover{
+    color: #6D214F;
+    background-color: #f7f1e3;
+}
+
+.row{
+    display: flex;
+    margin:auto;
+    width:80%;
+    margin-top: 15px;
+}
+/* Row kısmında flex özelliği ile yerleşim olacağını belirlemiştik. Column 
+klaslarında ise flex oranlarını belirleyerek row klası içerisinde column klaslarının
+yerleşimini orantılı şekilde sağladık. */
+.column1{
+    flex: 20%;
+    background-color: #05c46b;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.column2{
+    flex: 60%;
+    background-color: #84817a;
+    border-radius: 10px;
+    margin-left: 15px;
+    color: white;
+    padding: 20px;
+}
+/* divler içerisinde yer alan image dosyalarının sayfada dügün görüntülenmesi için
+gereken temel cssleri verdik. */
+.image {
+    text-align: center;
+    width: 100%;
+    margin:auto; 
+    height: 200;
+}
+
+.images{
+    text-align: center;
+}
+
+img{
+    width: 100%;
+    height: 100;
+}
+
+.footer{
+    padding:20px;
+    background-color: #227093;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+/* media etiketiyle sayfadaki navbar ve row claslarının 900px değerine kadar kolon
+şeklinde ve tek satır halinde görümünü sağladık.*/
+@media(max-width:900px)
+{
+
+    .row, .navbar{
+        flex-direction: column;
+    }
+}
